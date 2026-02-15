@@ -1,0 +1,180 @@
+/* Загальні стилі */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212;
+    color: #fff;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Хедер */
+header {
+    background-color: #1a1a1a;
+    padding: 20px 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: #9b30ff;
+}
+
+/* Герой-секція */
+.hero {
+    background-color: #1a1a1a;
+    padding: 80px 0;
+}
+
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-text h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background-color: #9b30ff;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #7a1bcc;
+}
+
+.hero-image img {
+    width: 350px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+/* Тема Lego */
+.themes {
+    padding: 60px 0;
+}
+
+.themes h3 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.theme-cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.theme-card {
+    background-color: #1f1f1f;
+    border-radius: 15px;
+    padding: 15px;
+    width: calc(20% - 16px);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.theme-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.theme-card h4 {
+    margin-bottom: 10px;
+    color: #9b30ff;
+}
+
+.theme-card p {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.theme-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(155, 48, 255, 0.3);
+}
+
+/* Футер */
+footer {
+    text-align: center;
+    padding: 25px 0;
+    background-color: #1a1a1a;
+    font-size: 14px;
+    color: #aaa;
+}
+
+/* Адаптивність */
+@media (max-width: 1000px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image img {
+        margin-top: 20px;
+    }
+
+    .theme-card {
+        width: calc(45% - 16px);
+    }
+}
+
+@media (max-width: 600px) {
+    .theme-card {
+        width: 100%;
+    }
+
+    .hero-text h2 {
+        font-size: 28px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+    }
+}
